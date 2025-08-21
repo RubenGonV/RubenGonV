@@ -1,13 +1,16 @@
 # 👋 Hola, soy Rubén González Velasco  
-
-Soy **Máster en Inteligencia Artificial** y graduado en **Matemáticas e Informática** por la Universidad Politécnica de Madrid.  
-Mi especialidad es aplicar técnicas de **IA y Machine Learning** a problemas complejos como gestión del tráfico aéreo, visión por computador y análisis de datos.  
-
-Recientemente, he trabajado en CRIDA A.I.E., donde apliqué IA en sistemas de tráfico aéreo, desarrollando modelos de detección de anomalías en trayectorias de vuelo.  
+<img width="1410" height="376" alt="image" src="https://github.com/user-attachments/assets/cf36f04b-be37-4654-add8-c51fd2885842" />
 
 ---
+Soy **Máster en Inteligencia Artificial** y **Graduado en Matemáticas e Informática** por la Universidad Politécnica de Madrid.  
+Mi especialidad es aplicar técnicas de IA y Machine Learning a problemas complejos como gestión del tráfico aéreo, visión por computador y análisis de datos.  
 
-## ✈️ Proyectos Destacados
+Recientemente, he trabajado en **CRIDA A.I.E.**, donde apliqué IA en sistemas de tráfico aéreo, desarrollando modelos de detección de anomalías en trayectorias de vuelo.  
+
+<img width="1101" height="97" alt="image" src="https://github.com/user-attachments/assets/e8e61210-2e44-48e4-aae3-0cb80ba0fecf" />
+
+---
+## Proyectos Destacados
 
 ### 1. Simulación de Sucesos Discretos en un Aeropuerto  
 📌 **Descripción:**  
