@@ -1,104 +1,462 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rubén González Velasco - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Rubén González Velasco - AI Engineer, Data Scientist e Investigador especializado en Machine Learning y Gestión de Tráfico Aéreo">
+    <meta name="keywords" content="AI Engineer, Data Science, Machine Learning, Python, Research, Portfolio">
+    <meta name="author" content="Rubén González Velasco">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rubén González Velasco - AI Engineer & Researcher">
+    <meta property="og:description" content="Portfolio profesional de ingeniero especializado en IA y Ciencia de Datos">
+    <meta property="og:type" content="website">
+    
+    <title>Rubén González Velasco - AI Engineer & Researcher</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>👋 Hola, soy <span>Rubén González Velasco</span></h1>
-    <img src="https://github.com/user-attachments/assets/cf36f04b-be37-4654-add8-c51fd2885842" alt="Banner" />
-  </header>
+    <!-- Navegación Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="images/perfil.jpg" alt="Foto de Rubén González Velasco" class="profile-img">
+            <h2>Rubén G.V.</h2>
+            <p>AI Engineer</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#inicio" class="nav-link active">
+                <i class="fas fa-home"></i>
+                Inicio
+            </a>
+            <a href="#sobre-mi" class="nav-link">
+                <i class="fas fa-user"></i>
+                Sobre Mí
+            </a>
+            <a href="#experiencia" class="nav-link">
+                <i class="fas fa-briefcase"></i>
+                Experiencia
+            </a>
+            <a href="#proyectos" class="nav-link">
+                <i class="fas fa-code"></i>
+                Proyectos
+            </a>
+            <a href="#skills" class="nav-link">
+                <i class="fas fa-cogs"></i>
+                Skills
+            </a>
+            <a href="#educacion" class="nav-link">
+                <i class="fas fa-graduation-cap"></i>
+                Educación
+            </a>
+            <a href="#contacto" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                Contacto
+            </a>
+        </nav>
+        
+        <div class="cv-links">
+            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/CV_RubenGonzalezVelasco_Aug25.pdf" class="cv-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> CV (ES)
+            </a>
+            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/CV_RubenGonzalezVelasco_EN_Nov25.pdf" class="cv-link" target="_blank">
+                <i class="fas fa-file-pdf"></i> CV (EN)
+            </a>
 
-  <section id="about">
-    <h2>💫 Acerca de mí</h2>
-    <p>
-      Soy <strong>Máster en Inteligencia Artificial</strong> y <strong>Graduado en Matemáticas e Informática</strong> por la Universidad Politécnica de Madrid.
-      Mi especialidad es aplicar técnicas de IA y Machine Learning a problemas complejos como gestión del tráfico aéreo, visión por computador y análisis de datos.
-    </p>
-    <p>🔭 Actualmente estoy buscando trabajo.<br>🌱 Aprendiendo diseño de sistemas y AWS.</p>
-    <p>
-      Recientemente trabajé en <strong>CRIDA A.I.E.</strong>, aplicando IA al tráfico aéreo mediante modelos de detección de anomalías en trayectorias de vuelo.
-    </p>
-    <img src="https://github.com/user-attachments/assets/e8e61210-2e44-48e4-aae3-0cb80ba0fecf" alt="CRIDA" />
-    <p>📄 <strong>Curriculum Vitae:</strong>
-      <a href="docs/CV_RubenGonzalezVelasco_Agosto25.pdf">Español</a> |
-      <a href="docs/CV_RubenGonzalezVelasco_Aug25.pdf">English</a>
-    </p>
-  </section>
+        </div>
+    </aside>
 
-  <section id="contact">
-    <h2>📬 Contacto</h2>
-    <a class="badge" href="https://linkedin.com/in/rubengonvel" target="_blank">LinkedIn</a>
-    <a class="badge" href="mailto:rubengonzalezvelasco@gmail.com">Email</a>
-  </section>
+    <!-- Header Móvil -->
+    <header class="mobile-header">
+        <h2>Rubén G.V.</h2>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
 
-  <section id="projects">
-    <h2>📄 Proyectos Destacados</h2>
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="inicio">
+            <div class="hero-content">
+                <h1 class="fade-in">Rubén González Velasco</h1>
+                <div class="typing-text" id="typing-text"></div>
+                <p class="hero-description fade-in">
+                    Ingeniero especializado en Inteligencia Artificial y Ciencia de Datos con experiencia en investigación de gestión de tráfico aéreo y desarrollo de modelos predictivos avanzados.
+                </p>
+                <div class="cta-buttons fade-in">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Ver Proyectos
+                    </a>
+                    <a href="#contacto" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contacto
+                    </a>
+                </div>
+                <div class="social-links fade-in">
+                    <a href="https://linkedin.com/in/rubengonvel/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/rubengonv" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:rubengonzalezvelasco@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <div class="project">
-      <h3>1️⃣ Simulación de Sucesos Discretos en un Aeropuerto</h3>
-      <p>Simulador de sucesos discretos para modelar procesos de un aeropuerto (colas, recursos, tiempos de espera).</p>
-      <p><strong>Stack:</strong></p>
-      <img src="https://skillicons.dev/icons?i=python" alt="python">
-      <p><a href="https://github.com/RubenGonV/Simulacion/tree/main/P1">🔗 Ver código</a></p>
-    </div>
+        <!-- About Section -->
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy un apasionado de la Inteligencia Artificial y el análisis de datos, actualmente cursando el Máster en Inteligencia Artificial en la Universidad Politécnica de Madrid con un expediente sobresaliente (9.13/10).
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Mi experiencia incluye investigación en gestión de tráfico aéreo en CRIDA, donde desarrollé modelos predictivos avanzados utilizando redes neuronales recurrentes y transformers. He trabajado en proyectos que combinan machine learning, deep learning y análisis de datos para resolver problemas complejos del mundo real.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Mi formación internacional incluye una estancia Erasmus+ en el prestigioso KTH Royal Institute of Technology en Estocolmo, donde amplié mis conocimientos en minería de datos, gestión de riesgos e interacción humano-computador.
+                    </p>
+                </div>
+                <div>
+                    <div class="highlights">
+                        <h3><i class="fas fa-star"></i> Destacados</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                MSc in Artificial Intelligence (GPA: 9.13/10)
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                BSc in Mathematics & Computer Science
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Experiencia Internacional (Erasmus+ KTH)
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Investigación en Air Traffic Management
+                            </li>
+                        </ul>
+                        <div class="languages">
+                            <h3 style="margin-top: 1.5rem;"><i class="fas fa-language"></i> Idiomas</h3>
+                            <span class="language-tag">🇪🇸 Español (Nativo)</span>
+                            <span class="language-tag">🇬🇧 Inglés (C1)</span>
+                            <span class="language-tag">🇫🇷 Francés (B2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="project">
-      <h3>2️⃣ Algoritmo Genético para Juego de Cifras</h3>
-      <p>Implementación de un algoritmo genético para resolver un juego de cifras simplificado.</p>
-      <p><strong>Stack:</strong></p>
-      <img src="https://skillicons.dev/icons?i=python" alt="python">
-      <p><a href="https://github.com/RubenGonV/Simulacion/blob/main/P2/genetic_main.ipynb">🔗 Ver Notebook</a></p>
-    </div>
+        <!-- Experience Section -->
+        <section id="experiencia">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-card">
+                <div class="company-logo" style="background: var(--surface); display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                    <i class="fas fa-plane" style="font-size: 2.5rem; color: var(--accent);"></i>
+                </div>
+                <div class="experience-details">
+                    <h3>AI Research Intern</h3>
+                    <div class="company-name">CRIDA A.I.E.</div>
+                    <div class="experience-meta">
+                        <i class="fas fa-calendar"></i> 02/2025 - 07/2025 &nbsp;|&nbsp;
+                        <i class="fas fa-map-marker-alt"></i> Madrid, Spain
+                    </div>
+                    <ul class="experience-bullets">
+                        <li>Desarrollé AdherNet, un modelo avanzado basado en RNN y Transformers para predecir la adherencia de trayectorias de vuelo, mejorando la precisión en un 25%.</li>
+                        <li>Implementé pipelines completos de MLOps utilizando TensorFlow, Keras y MLflow para el entrenamiento, evaluación y despliegue de modelos en producción.</li>
+                        <li>Colaboré estrechamente con ingenieros de tráfico aéreo para integrar soluciones de IA que optimizan la gestión del espacio aéreo europeo.</li>
+                        <li>Participé en la investigación y desarrollo de algoritmos de optimización para mejorar la eficiencia operativa del tráfico aéreo.</li>
+                    </ul>
+                    <div class="tech-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">TensorFlow</span>
+                        <span class="badge">Keras</span>
+                        <span class="badge">MLflow</span>
+                        <span class="badge">Pandas</span>
+                        <span class="badge">NumPy</span>
+                        <span class="badge">RNN</span>
+                        <span class="badge">Transformers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="project">
-      <h3>3️⃣ TFG – Modelos Preentrenados en Visión Artificial</h3>
-      <p>Evaluación de cómo los modelos preentrenados mejoran tareas de visión por computador.</p>
-      <p><strong>Stack:</strong></p>
-      <img src="https://skillicons.dev/icons?i=python,flask,pytorch,docker,latex" alt="tfg-stack">
-      <p>
-        <a href="docs/TFG_Ruben.pdf">📄 PDF</a> | 
-        <a href="docs/TFG_Presentacion.pdf">📊 Presentación</a>
-      </p>
-    </div>
+        <!-- Projects Section -->
+        <section id="proyectos">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Simulación de Aeropuerto</h3>
+                        <p class="project-description">
+                            Sistema de simulación completo para modelar operaciones aeroportuarias, incluyendo gestión de pistas, asignación de gates y optimización de tiempos de espera.
+                        </p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">SimPy</span>
+                            <span class="badge">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="project">
-      <h3>4️⃣ TFM – IA en Trayectorias de Vuelo</h3>
-      <p>Modelos de IA para medir la adherencia de trayectorias reales a planes de vuelo.</p>
-      <p><strong>Stack:</strong></p>
-      <img src="https://skillicons.dev/icons?i=python,tensorflow,latex" alt="tfm-stack">
-      <p>
-        <a href="docs/TFM_Ruben.pdf">📄 PDF</a> | 
-        <a href="docs/TFM_Presentacion.pdf">📊 Presentación</a>
-      </p>
-    </div>
-  </section>
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Algoritmo Genético</h3>
+                        <p class="project-description">
+                            Implementación de algoritmos evolutivos para resolver problemas de optimización complejos, incluyendo el problema del viajante y scheduling.
+                        </p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">NumPy</span>
+                            <span class="badge">Matplotlib</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-book"></i> Ver Notebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-  <section id="stack">
-    <h2>💻 Tech Stack</h2>
-    
-    <h3>Languages</h3>
-    <p><img src="https://skillicons.dev/icons?i=python,c,java,r" alt="languages"></p>
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>TFG - Visión Artificial</h3>
+                        <p class="project-description">
+                            Desarrollo de modelos preentrenados de Computer Vision para clasificación y detección de objetos utilizando arquitecturas CNN modernas.
+                        </p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">PyTorch</span>
+                            <span class="badge">Flask</span>
+                            <span class="badge">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFG_Ruben.pdf" class="project-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFG_Presentacion.pdf" class="project-link secondary" target="_blank">
+                                <i class="fas fa-presentation"></i> Presentación
+                            </a>
+                        </div>
 
-    <h3>Machine Learning</h3>
-    <p><img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn" alt="ml"></p>
+                    </div>
+                </div>
 
-    <h3>Web</h3>
-    <p><img src="https://skillicons.dev/icons?i=angular,flask" alt="web"></p>
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>TFM - Trayectorias de Vuelo</h3>
+                        <p class="project-description">
+                            Proyecto de investigación en IA aplicada a la predicción de adherencia de trayectorias de vuelo utilizando técnicas de Deep Learning y series temporales.
+                        </p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">TensorFlow</span>
+                            <span class="badge">RNN</span>
+                            <span class="badge">LSTM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFM_Ruben.pdf" class="project-link" target="_blank">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </a>
+                            <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFM_Presentacion.pdf" class="project-link secondary" target="_blank">
+                                <i class="fas fa-presentation"></i> Presentación
+                            </a>
+                        </div>
 
-    <h3>Docs</h3>
-    <p><img src="https://skillicons.dev/icons?i=latex,markdown,figma,notion" alt="docs"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h3>Other Tools</h3>
-    <p><img src="https://skillicons.dev/icons?i=anaconda,qt,mysql,postgres,githubactions,git,github,gitlab,docker,postman" alt="tools"></p>
-  </section>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MATLAB</span>
+                    </div>
+                </div>
 
-  <footer>
-    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Quote" />
-  </footer>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Desarrollo Web</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Herramientas & Tecnologías</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Anaconda</span>
+                        <span class="skill-tag">Qt</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Notion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="educacion">
+            <h2 class="section-title">Educación</h2>
+            <div class="education-timeline">
+                <!-- Educación 1 -->
+                <div class="education-card">
+                    <div class="university-logo" style="background: var(--surface); display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                        <i class="fas fa-university" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Master's Degree in Artificial Intelligence</h3>
+                        <div class="education-meta">
+                            <span class="gpa">GPA: 9.13/10</span>
+                            <i class="fas fa-calendar"></i> 2024 - 2025 &nbsp;|&nbsp;
+                            <i class="fas fa-map-marker-alt"></i> Madrid, Spain
+                        </div>
+                        <p><strong>Universidad Politécnica de Madrid (UPM)</strong></p>
+                        <p>Especialización en Machine Learning, Deep Learning, Natural Language Processing, y Evolutionary Computing. Investigación aplicada en gestión de tráfico aéreo.</p>
+                    </div>
+                </div>
+
+                <!-- Educación 2 -->
+                <div class="education-card">
+                    <div class="university-logo" style="background: var(--surface); display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                        <i class="fas fa-globe-europe" style="font-size: 2.5rem; color: var(--accent);"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Erasmus+ Exchange Program</h3>
+                        <div class="education-meta">
+                            <i class="fas fa-calendar"></i> 2023 - 2024 &nbsp;|&nbsp;
+                            <i class="fas fa-map-marker-alt"></i> Stockholm, Sweden
+                        </div>
+                        <p><strong>KTH Royal Institute of Technology</strong></p>
+                        <p>Cursos avanzados en Data Mining, Human-Computer Interaction, Risk Management, y Software Engineering. Experiencia internacional en uno de los mejores institutos tecnológicos de Europa.</p>
+                    </div>
+                </div>
+
+                <!-- Educación 3 -->
+                <div class="education-card">
+                    <div class="university-logo" style="background: var(--surface); display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                        <i class="fas fa-university" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Bachelor's Degree in Mathematics & Computer Science</h3>
+                        <div class="education-meta">
+                            <span class="gpa">GPA: 7.12/10</span>
+                            <i class="fas fa-calendar"></i> 2020 - 2024 &nbsp;|&nbsp;
+                            <i class="fas fa-map-marker-alt"></i> Madrid, Spain
+                        </div>
+                        <p><strong>Universidad Politécnica de Madrid (UPM)</strong></p>
+                        <p>Doble titulación con especialización en Algoritmos, Estadística, Topología, y Fundamentos de Computación. Base sólida en matemáticas aplicadas y ciencias de la computación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto">
+            <h2 class="section-title">¿Trabajamos juntos?</h2>
+            <p class="contact-subtitle">
+                Estoy abierto a nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <a href="tel:+34665431601">+34 665 43 16 01</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:rubengonzalezvelasco@gmail.com">rubengonzalezvelasco@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/rubengonvel/" target="_blank">linkedin.com/in/rubengonvel</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>Segovia, Spain</p>
+                </div>
+            </div>
+            
+            <div class="availability">
+                <i class="fas fa-check-circle"></i> Disponible para oportunidades laborales
+            </div>
+        </section>
+    </main>
+
+    <!-- Script externo -->
+    <script src="script.js"></script>
 </body>
 </html>
