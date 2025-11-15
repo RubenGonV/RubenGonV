@@ -5,16 +5,17 @@
 }
 
 :root {
-    --primary-dark: #0A1929;
-    --primary: #1E3A5F;
-    --primary-light: #2E5A8F;
-    --accent: #4A90E2;
-    --accent-hover: #357ABD;
+    --primary-dark: #0A0E1A;
+    --primary: #1A2340;
+    --primary-light: #2E3D6B;
+    --accent: #6B8FC8;
+    --accent-light: #8BA8E0;
+    --accent-hover: #5A7FB8;
     --background: #FFFFFF;
-    --surface: #F5F7FA;
+    --surface: #F0F4F8;
     --text-primary: #1A1A1A;
-    --text-secondary: #666666;
-    --border: #E1E4E8;
+    --text-secondary: #4A5568;
+    --border: #D1D9E6;
 }
 
 body {
@@ -22,6 +23,8 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     background-color: var(--background);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navegación Lateral */
@@ -143,12 +146,22 @@ body {
 .main-content {
     margin-left: 280px;
     min-height: 100vh;
+    width: calc(100% - 280px);
 }
 
 section {
     padding: 5rem 3rem;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Override section styles for full-width sections */
+#inicio,
+#contacto {
+    max-width: none;
+    width: 100%;
 }
 
 .section-title {
@@ -171,14 +184,30 @@ section {
 
 /* Hero Section */
 #inicio {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
     color: white;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 #inicio::before {
@@ -189,11 +218,16 @@ section {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    padding: 5rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .hero-content h1 {
@@ -332,7 +366,7 @@ section {
 
 /* Experience Section */
 .experience-card {
-    background: white;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 2rem;
@@ -352,6 +386,11 @@ section {
     height: 80px;
     object-fit: contain;
     flex-shrink: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .experience-details h3 {
@@ -398,7 +437,7 @@ section {
 
 .badge {
     padding: 0.4rem 0.8rem;
-    background: var(--surface);
+    background: white;
     border-radius: 5px;
     font-size: 0.85rem;
     color: var(--primary);
@@ -406,7 +445,7 @@ section {
 
 /* Projects Section */
 #proyectos {
-    background: var(--surface);
+    background: white;
 }
 
 .projects-grid {
@@ -416,7 +455,7 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: var(--surface);
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid var(--border);
@@ -475,7 +514,7 @@ section {
 }
 
 .project-link.secondary {
-    background: var(--surface);
+    background: white;
     color: var(--primary);
 }
 
@@ -487,7 +526,7 @@ section {
 }
 
 .skill-category {
-    background: white;
+    background: var(--surface);
     padding: 2rem;
     border-radius: 10px;
     border: 1px solid var(--border);
@@ -513,7 +552,7 @@ section {
 
 .skill-tag {
     padding: 0.6rem 1.2rem;
-    background: var(--surface);
+    background: white;
     border-radius: 5px;
     font-size: 0.9rem;
     border: 1px solid var(--border);
@@ -529,7 +568,7 @@ section {
 
 /* Education Section */
 #educacion {
-    background: var(--surface);
+    background: white;
 }
 
 .education-timeline {
@@ -539,7 +578,7 @@ section {
 }
 
 .education-card {
-    background: white;
+    background: var(--surface);
     border-radius: 10px;
     padding: 2rem;
     display: flex;
@@ -557,6 +596,11 @@ section {
     height: 80px;
     object-fit: contain;
     flex-shrink: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .education-details h3 {
@@ -573,7 +617,7 @@ section {
 .gpa {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: var(--surface);
+    background: white;
     border-radius: 5px;
     font-weight: 600;
     color: var(--accent);
@@ -582,13 +626,43 @@ section {
 
 /* Contact Section */
 #contacto {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 3rem;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+#contacto .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #contacto .section-title {
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
 #contacto .section-title::after {
@@ -601,6 +675,8 @@ section {
     font-size: 1.3rem;
     margin-bottom: 3rem;
     opacity: 0.9;
+    position: relative;
+    z-index: 2;
 }
 
 .contact-grid {
@@ -609,6 +685,8 @@ section {
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 .contact-item {
@@ -652,6 +730,8 @@ section {
     border-radius: 10px;
     max-width: 600px;
     margin: 2rem auto 0;
+    position: relative;
+    z-index: 2;
 }
 
 /* Animations */
@@ -688,6 +768,7 @@ section {
     .main-content {
         margin-left: 0;
         padding-top: 60px;
+        width: 100%;
     }
 
     section {
