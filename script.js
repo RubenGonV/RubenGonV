@@ -12,7 +12,7 @@ let isDeleting = false;
 
 function typeEffect() {
     const currentPhrase = phrases[phraseIndex];
-    
+
     if (isDeleting) {
         typingText.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
@@ -48,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            
+
             // Cerrar menú móvil si está abierto
             if (window.innerWidth <= 1024) {
                 sidebar.classList.remove('active');
@@ -67,8 +67,8 @@ hamburger.addEventListener('click', () => {
 
 // Cerrar sidebar al hacer click fuera
 document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 1024 && 
-        !sidebar.contains(e.target) && 
+    if (window.innerWidth <= 1024 &&
+        !sidebar.contains(e.target) &&
         !hamburger.contains(e.target) &&
         sidebar.classList.contains('active')) {
         sidebar.classList.remove('active');
@@ -81,7 +81,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 function updateActiveSection() {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -115,16 +115,23 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observar elementos para animación
-document.querySelectorAll('.project-card, .skill-category, .education-card, .experience-card').forEach(el => {
+// Observar elementos para animación con delays escalonados
+document.querySelectorAll('.project-card, .skill-category, .education-card, .experience-card').forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+    // Añadir delay escalonado para project cards
+    if (el.classList.contains('project-card')) {
+        el.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
+    } else {
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    }
+
     observer.observe(el);
 });
 
 // Cambiar icono hamburguesa
-hamburger.addEventListener('click', function() {
+hamburger.addEventListener('click', function () {
     const icon = this.querySelector('i');
     if (sidebar.classList.contains('active')) {
         icon.classList.remove('fa-bars');

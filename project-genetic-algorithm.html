@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Algoritmo Genético - Proyecto de Rubén González Velasco">
+    <title>Algoritmo Genético - Rubén González Velasco</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            gap: 0.8rem;
+            color: var(--accent-hover);
+        }
+
+        .project-hero {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+        }
+
+        .project-detail h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project-detail-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .project-detail-content h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-detail-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-detail-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-content" style="margin-left: 0; width: 100%;">
+        <div class="project-detail">
+            <a href="index.html#proyectos" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver a Proyectos
+            </a>
+
+            <div class="project-hero" style="background-image: url('images/projects/genetic_algorithm.png');"></div>
+
+            <h1>Algoritmo Genético</h1>
+
+            <div class="project-info">
+                <span class="project-category">Optimización</span>
+                <span class="project-year">2024</span>
+            </div>
+
+            <div class="tech-badges" style="margin-bottom: 2rem;">
+                <span class="badge">Python</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">Matplotlib</span>
+            </div>
+
+            <div class="project-detail-content">
+                <h2>Descripción</h2>
+                <p>
+                    Implementación de algoritmos evolutivos para resolver problemas de optimización complejos. Este
+                    proyecto
+                    explora técnicas de computación evolutiva aplicadas a problemas clásicos como el problema del
+                    viajante (TSP)
+                    y scheduling de tareas.
+                </p>
+
+                <h2>Características Principales</h2>
+                <ul>
+                    <li>Implementación de operadores genéticos (selección, cruce, mutación)</li>
+                    <li>Resolución del problema del viajante (TSP)</li>
+                    <li>Optimización de scheduling de tareas</li>
+                    <li>Visualización de la evolución de la población</li>
+                    <li>Análisis de convergencia y diversidad genética</li>
+                </ul>
+
+                <h2>Tecnologías Utilizadas</h2>
+                <p>
+                    Desarrollado en <strong>Python</strong> con <strong>NumPy</strong> para operaciones matriciales
+                    eficientes
+                    y <strong>Matplotlib</strong> para la visualización de resultados y evolución del algoritmo.
+                </p>
+
+                <h2>Resultados</h2>
+                <p>
+                    El algoritmo genético demuestra capacidad para encontrar soluciones cercanas al óptimo en problemas
+                    de optimización combinatoria, con tiempos de ejecución razonables incluso para instancias de gran
+                    tamaño.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

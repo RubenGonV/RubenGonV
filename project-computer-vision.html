@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TFG - Visión Artificial - Proyecto de Rubén González Velasco">
+    <title>TFG - Visión Artificial - Rubén González Velasco</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            gap: 0.8rem;
+            color: var(--accent-hover);
+        }
+
+        .project-hero {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+        }
+
+        .project-detail h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project-detail-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .project-detail-content h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-detail-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-detail-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-content" style="margin-left: 0; width: 100%;">
+        <div class="project-detail">
+            <a href="index.html#proyectos" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver a Proyectos
+            </a>
+
+            <div class="project-hero" style="background-image: url('images/projects/computer_vision.png');"></div>
+
+            <h1>TFG - Visión Artificial</h1>
+
+            <div class="project-info">
+                <span class="project-category">Computer Vision</span>
+                <span class="project-year">2024</span>
+                <span class="project-status published">Publicado</span>
+            </div>
+
+            <div class="tech-badges" style="margin-bottom: 2rem;">
+                <span class="badge">Python</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">Flask</span>
+                <span class="badge">Docker</span>
+            </div>
+
+            <div class="project-detail-content">
+                <h2>Descripción</h2>
+                <p>
+                    Trabajo de Fin de Grado centrado en el desarrollo de modelos preentrenados de Computer Vision para
+                    clasificación y detección de objetos utilizando arquitecturas CNN modernas. El proyecto incluye una
+                    aplicación web para demostrar las capacidades de los modelos.
+                </p>
+
+                <h2>Características Principales</h2>
+                <ul>
+                    <li>Implementación de arquitecturas CNN modernas (ResNet, EfficientNet)</li>
+                    <li>Transfer learning con modelos preentrenados</li>
+                    <li>API REST para inferencia de modelos</li>
+                    <li>Aplicación web interactiva con Flask</li>
+                    <li>Despliegue con Docker para portabilidad</li>
+                </ul>
+
+                <h2>Tecnologías Utilizadas</h2>
+                <p>
+                    El proyecto utiliza <strong>PyTorch</strong> como framework de deep learning, <strong>Flask</strong>
+                    para el desarrollo del backend web, y <strong>Docker</strong> para containerización y despliegue.
+                </p>
+
+                <h2>Resultados</h2>
+                <p>
+                    Los modelos desarrollados alcanzan una precisión superior al 90% en tareas de clasificación de
+                    imágenes,
+                    demostrando la efectividad del transfer learning en problemas de visión artificial.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFG_Ruben.pdf" class="project-link"
+                        target="_blank">
+                        <i class="fas fa-file-pdf"></i> Ver PDF
+                    </a>
+                    <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFG_Presentacion.pdf"
+                        class="project-link secondary" target="_blank">
+                        <i class="fas fa-presentation"></i> Ver Presentación
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
