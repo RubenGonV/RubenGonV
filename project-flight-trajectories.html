@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        p {
+            margin: 1rem;
+        }
+
+        li {
+            margin: 0;
+            margin-left: 2rem;
+        }
+
         .project-detail {
             max-width: 1000px;
             margin: 0 auto;
@@ -63,6 +72,17 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
             align-items: center;
+        }
+
+        .project-detail-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .project-detail-content h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
 
         .project-detail-content ul {
@@ -133,6 +153,26 @@
                     trayectorias de vuelo con precisión de experto y velocidad de máquina.
                 </p>
 
+                <h2>El problema: comparar dos realidades diferentes</h2>
+                <p>Cada vuelo tiene dos versiones:</p>
+                <ul>
+                    <li><strong>El plan</strong>: 5-20 puntos estratégicos separados por más de 150 km</li>
+                    <li><strong>La traza radar</strong>: hasta 180 puntos cada 3 km</li>
+                </ul>
+                <p>
+                    Es como comparar un boceto con una fotografía de alta resolución. Los métodos tradicionales (Dynamic
+                    Time Warping) funcionan pero son lentos: procesar 1.000 vuelos puede llevar días.
+                </p>
+                <p>
+                    Además, medir similitud no es solo distancia geográfica. Hay que considerar:
+                </p>
+                <ul>
+                    <li>Desviaciones espaciales (latitud, longitud y altitud)</li>
+                    <li>Diferencias temporales (retrasos, velocidades variables)</li>
+                    <li>Calidad de datos (ruido GPS, pérdidas de señal)</li>
+                </ul>
+
+                <h2>La solución: aprender patrones, no calcular distancias</h2>
                 <p>
                     AdherNet utiliza <strong>redes neuronales recurrentes bidireccionales con atención</strong> para
                     procesar directamente coordenadas crudas (latitud, longitud, altitud, tiempo). El modelo lee cada
@@ -180,18 +220,26 @@
                 </ul>
 
                 <h2>Aplicaciones inmediatas</h2>
-                <ul>
-                    <li><strong>Validación operativa</strong>: Identificar aerolíneas o rutas con desviaciones
-                        sistemáticas para auditorías y mejora de procedimientos.</li>
-                    <li><strong>Identificación de vuelos</strong>: Emparejar trazas radar anónimas o con errores de
-                        etiquetado con sus planes correspondientes.</li>
-                    <li><strong>Métricas de predicción</strong>: Evaluar rápidamente la calidad de modelos que predicen
-                        trayectorias futuras.</li>
-                    <li><strong>Detección de anomalías</strong>: Alertas automáticas cuando un vuelo se desvía
-                        significativamente del plan.</li>
-                    <li><strong>Análisis de flujos</strong>: Clustering de vuelos por similitud para optimizar rutas
-                        entre regiones.</li>
-                </ul>
+                <p>
+                    <strong>Validación operativa</strong>: Identificar aerolíneas o rutas con desviaciones sistemáticas
+                    para auditorías y mejora de procedimientos.
+                </p>
+                <p>
+                    <strong>Identificación de vuelos</strong>: Emparejar trazas radar anónimas o con errores de
+                    etiquetado con sus planes correspondientes.
+                </p>
+                <p>
+                    <strong>Métricas de predicción</strong>: Evaluar rápidamente la calidad de modelos que predicen
+                    trayectorias futuras.
+                </p>
+                <p>
+                    <strong>Detección de anomalías</strong>: Alertas automáticas cuando un vuelo se desvía
+                    significativamente del plan.
+                </p>
+                <p>
+                    <strong>Análisis de flujos</strong>: Clustering de vuelos por similitud para optimizar rutas entre
+                    regiones.
+                </p>
 
                 <h2>Impacto</h2>
                 <p>
