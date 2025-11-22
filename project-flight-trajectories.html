@@ -59,20 +59,10 @@
 
         .project-info {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-bottom: 2rem;
             flex-wrap: wrap;
-        }
-
-        .project-detail-content {
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        .project-detail-content h2 {
-            color: var(--primary);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            align-items: center;
         }
 
         .project-detail-content ul {
@@ -86,9 +76,11 @@
 
         .project-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
             flex-wrap: wrap;
+        }
+
+        .badge {
+            border: 1px solid var(--primary);
         }
     </style>
 </head>
@@ -108,6 +100,9 @@
                 <span class="project-category">Deep Learning</span>
                 <span class="project-year">2025</span>
                 <span class="project-status published">Publicado</span>
+                <a href="https://oa.upm.es/90980" class="project-link secondary" target="_blank">
+                    <i class="fas fa-university"></i> Ver este proyecto en la página oficial de la UPM
+                </a>
             </div>
 
             <div class="tech-badges" style="margin-bottom: 2rem;">
@@ -118,49 +113,109 @@
             </div>
 
             <div class="project-detail-content">
-                <h2>Descripción</h2>
+                <h2>AdherNet: IA para medir la adherencia de vuelos en tiempo real</h2>
+
+                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <img src="images/crida-logo.png" alt="CRIDA Logo" style="height: 50px; object-fit: contain;">
+                    <img src="images/upm-logo.png" alt="UPM Logo" style="height: 50px; object-fit: contain;">
+                </div>
+
+                <br>
                 <p>
-                    Trabajo de Fin de Máster desarrollado en colaboración con CRIDA A.I.E., centrado en la investigación
-                    en IA
-                    aplicada a la predicción de adherencia de trayectorias de vuelo. El proyecto utiliza técnicas
-                    avanzadas de
-                    Deep Learning y análisis de series temporales para mejorar la gestión del tráfico aéreo.
+                    Cada día, más de 100.000 vuelos cruzan nuestros cielos siguiendo planes de vuelo detallados. Pero la
+                    realidad rara vez coincide con lo planeado: el clima cambia, el tráfico se congestiona, los
+                    controladores ordenan desvíos. ¿Cómo medir automáticamente estas desviaciones cuando hay miles de
+                    vuelos diarios?
+                </p>
+                <p>
+                    Mi Trabajo Fin de Máster en la Universidad Politécnica de Madrid, desarrollado en el proyecto DELFOS
+                    de CRIDA, propone <strong>AdherNet</strong>: un modelo de inteligencia artificial que compara
+                    trayectorias de vuelo con precisión de experto y velocidad de máquina.
                 </p>
 
-                <h2>Características Principales</h2>
+                <p>
+                    AdherNet utiliza <strong>redes neuronales recurrentes bidireccionales con atención</strong> para
+                    procesar directamente coordenadas crudas (latitud, longitud, altitud, tiempo). El modelo lee cada
+                    trayectoria en ambas direcciones y aprende qué segmentos son críticos.
+                </p>
+                <p>
+                    Cada trayectoria se convierte en una "huella digital" compacta. Comparar dos vuelos se reduce a
+                    comparar vectores, lo cual es una operación ultrarrápida.
+                </p>
+
+                <h2>Contribuciones principales</h2>
+                <p>
+                    <strong>1. Métrica de adherencia calibrable</strong>: Combina distancia geodésica y dilatación
+                    temporal con parámetros ajustables. Permite priorizar aspectos espaciales o temporales según
+                    necesidades operativas sin reentrenar.
+                </p>
+                <p>
+                    <strong>2. Modelo AdherNet supervisado</strong>: Primera arquitectura específica para adherencia de
+                    trayectorias 4D (lat, lon, alt, tiempo) que procesa datos crudos sin preprocesamiento complejo.
+                    Entrenado con 50.000 pares reales de planes de vuelo.
+                </p>
+                <p>
+                    <strong>3. Dataset representativo</strong>: Conjunto validado de trayectorias planificadas y radar
+                    del espacio aéreo español, reutilizable para investigación futura.
+                </p>
+
+                <h2>Resultados técnicos</h2>
+                <p><strong>Precisión excepcional</strong>:</p>
                 <ul>
-                    <li>Desarrollo de AdherNet, modelo basado en RNN y Transformers</li>
-                    <li>Predicción de adherencia de trayectorias con 25% de mejora en precisión</li>
-                    <li>Procesamiento de datos de vuelo en tiempo real</li>
-                    <li>Pipeline completo de MLOps con TensorFlow y MLflow</li>
-                    <li>Integración con sistemas de gestión de tráfico aéreo</li>
+                    <li>R² = 0.93 en test (10.000 pares FPL3-TRK radar)</li>
                 </ul>
 
-                <h2>Tecnologías Utilizadas</h2>
+                <p><strong>Velocidad transformadora</strong> (emparejamiento de 1.000 trayectorias):</p>
+                <ul>
+                    <li>DTW clásico: ~43 horas estimadas</li>
+                    <li>FastDTW: 7 horas</li>
+                    <li><strong>AdherNet: 4.36 segundos</strong> (6.000x más rápido que FastDTW)</li>
+                </ul>
+
+                <p><strong>Capacidad de búsqueda</strong>:</p>
+                <ul>
+                    <li>Precisión@1: 95.7% (encuentra pareja correcta entre 1.000 opciones)</li>
+                    <li>Precisión@5: 100% (entre las 5 primeras opciones)</li>
+                    <li>Ranking promedio: 1.055 (casi siempre primera posición)</li>
+                </ul>
+
+                <h2>Aplicaciones inmediatas</h2>
+                <ul>
+                    <li><strong>Validación operativa</strong>: Identificar aerolíneas o rutas con desviaciones
+                        sistemáticas para auditorías y mejora de procedimientos.</li>
+                    <li><strong>Identificación de vuelos</strong>: Emparejar trazas radar anónimas o con errores de
+                        etiquetado con sus planes correspondientes.</li>
+                    <li><strong>Métricas de predicción</strong>: Evaluar rápidamente la calidad de modelos que predicen
+                        trayectorias futuras.</li>
+                    <li><strong>Detección de anomalías</strong>: Alertas automáticas cuando un vuelo se desvía
+                        significativamente del plan.</li>
+                    <li><strong>Análisis de flujos</strong>: Clustering de vuelos por similitud para optimizar rutas
+                        entre regiones.</li>
+                </ul>
+
+                <h2>Impacto</h2>
                 <p>
-                    Implementado con <strong>TensorFlow</strong> y <strong>Keras</strong> para el desarrollo de modelos
-                    de deep learning,
-                    utilizando arquitecturas <strong>RNN</strong> y <strong>LSTM</strong> para el análisis de series
-                    temporales de
-                    trayectorias de vuelo.
+                    AdherNet demuestra que la IA no es promesa futurista, sino herramienta concreta para problemas
+                    complejos. No reemplaza expertos ni sistemas existentes: <strong>los potencia</strong> con capacidad
+                    de procesamiento masivo imposible antes.
+                </p>
+                <p>
+                    En un sector donde el tráfico crece, la eficiencia importa y la seguridad es innegociable, sistemas
+                    que procesen datos imperfectos en tiempo real son <strong>necesidad estratégica</strong>. Este
+                    trabajo aporta precisión científica (R² > 0.93), velocidad operativa (segundos vs. horas) y
+                    flexibilidad práctica (métrica calibrable, casos de uso múltiples).
+                </p>
+                <p>
+                    Cada vuelo que despega con un plan merece ser entendido en su ejecución. AdherNet abre esa ventana:
+                    rápida, precisa y lista para escalar al tráfico aéreo real.
                 </p>
 
-                <h2>Resultados</h2>
-                <p>
-                    El modelo AdherNet logró una mejora del 25% en la precisión de predicción de adherencia de
-                    trayectorias,
-                    contribuyendo significativamente a la optimización de la gestión del espacio aéreo europeo.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFM_Ruben.pdf" class="project-link"
-                        target="_blank">
-                        <i class="fas fa-file-pdf"></i> Ver PDF
-                    </a>
-                    <a href="https://github.com/RubenGonV/RubenGonV/blob/main/docs/TFM_Presentacion.pdf"
-                        class="project-link secondary" target="_blank">
-                        <i class="fas fa-presentation"></i> Ver Presentación
-                    </a>
+                <div style="margin-top: 3rem;">
+                    <h2>Presentación del Proyecto</h2>
+                    <div
+                        style="width: 100%; height: 600px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <embed src="docs/TFM_Presentacion.pdf" type="application/pdf" width="100%" height="100%" />
+                    </div>
                 </div>
             </div>
         </div>
