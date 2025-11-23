@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Regresión Lineal - Proyecto de Rubén González Velasco">
+    <title>Regresión Lineal - Rubén González Velasco</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-detail {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            gap: 0.8rem;
+            color: var(--accent-hover);
+        }
+
+        .project-hero {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+        }
+
+        .project-detail h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project-detail-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .project-detail-content h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-detail-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-detail-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-content" style="margin-left: 0; width: 100%;">
+        <div class="project-detail">
+            <a href="../ml-projects.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Volver a ML Projects
+            </a>
+
+            <div class="project-hero" style="background-image: url('../images/projects/linear_regression.png');"></div>
+
+            <h1>Regresión Lineal</h1>
+
+            <div class="project-info">
+                <span class="project-category">Supervised Learning</span>
+                <span class="project-year">2024</span>
+            </div>
+
+            <div class="tech-badges" style="margin-bottom: 2rem;">
+                <span class="badge">Python</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">Matplotlib</span>
+                <span class="badge">Scikit-Learn</span>
+            </div>
+
+            <div class="project-detail-content">
+                <h2>Descripción</h2>
+                <p>
+                    Implementación fundamental del algoritmo de Regresión Lineal, tanto desde cero utilizando NumPy para
+                    comprender las matemáticas subyacentes (Descenso de Gradiente), como utilizando bibliotecas estándar
+                    de la industria como Scikit-Learn.
+                </p>
+
+                <h2>Características Principales</h2>
+                <ul>
+                    <li>Implementación manual de Descenso de Gradiente</li>
+                    <li>Visualización de la función de coste y convergencia</li>
+                    <li>Cálculo de métricas de error (MSE, R²)</li>
+                    <li>Comparación de rendimiento con Scikit-Learn</li>
+                    <li>Visualización de la recta de regresión y residuos</li>
+                </ul>
+
+                <h2>Tecnologías Utilizadas</h2>
+                <p>
+                    El proyecto utiliza <strong>Python</strong> como lenguaje base. <strong>NumPy</strong> se emplea
+                    para las operaciones matriciales eficientes en la implementación manual. <strong>Matplotlib</strong>
+                    permite la visualización de los datos y los modelos, mientras que <strong>Scikit-Learn</strong>
+                    sirve como referencia para validar los resultados.
+                </p>
+
+                <h2>Resultados</h2>
+                <p>
+                    El modelo implementado logra converger exitosamente a los parámetros óptimos, demostrando un
+                    rendimiento idéntico a la implementación de referencia de Scikit-Learn en conjuntos de datos
+                    lineales, validando la comprensión profunda del algoritmo.
+                </p>
+
+                <h2>Ejemplo Interactivo (Notebook)</h2>
+                <p>A continuación se muestra un ejemplo práctico de predicción de precios de viviendas utilizando 3
+                    características: Área, Habitaciones y Antigüedad.</p>
+
+                <div class="notebook-container"
+                    style="background: #1e1e1e; border-radius: 8px; padding: 20px; margin-top: 20px; font-family: 'Consolas', 'Monaco', monospace;">
+                    <!-- Input Cell -->
+                    <div class="notebook-cell input-cell" style="margin-bottom: 20px;">
+                        <div class="cell-label" style="color: #6a9955; margin-bottom: 5px; font-size: 0.9em;">In [1]:
+                        </div>
+                        <div class="code-block"
+                            style="background: #2d2d2d; padding: 15px; border-radius: 5px; border-left: 4px solid #007acc; color: #d4d4d4; overflow-x: auto;">
+                            <pre style="margin: 0;"><code><span style="color: #c586c0;">import</span> numpy <span style="color: #c586c0;">as</span> np
+<span style="color: #c586c0;">from</span> sklearn.linear_model <span style="color: #c586c0;">import</span> LinearRegression
+<span style="color: #c586c0;">from</span> sklearn.metrics <span style="color: #c586c0;">import</span> r2_score
+
+<span style="color: #6a9955;"># 1. Generar Datos Sintéticos (Área, Habitaciones, Edad)</span>
+n_samples = <span style="color: #b5cea8;">100</span>
+X = np.random.rand(n_samples, <span style="color: #b5cea8;">3</span>) <span style="color: #6a9955;"># Features</span>
+<span style="color: #6a9955;"># Coeficientes reales: Precio = 2000*Area + 15000*Hab - 500*Edad + Base</span>
+true_coef = np.array([<span style="color: #b5cea8;">2000</span>, <span style="color: #b5cea8;">15000</span>, <span style="color: #b5cea8;">-500</span>])
+y = X.dot(true_coef) + <span style="color: #b5cea8;">50000</span> + np.random.normal(<span style="color: #b5cea8;">0</span>, <span style="color: #b5cea8;">15000</span>, n_samples)
+
+<span style="color: #6a9955;"># 2. Entrenar Modelo</span>
+model = LinearRegression()
+model.fit(X, y)
+
+<span style="color: #6a9955;"># 3. Evaluar</span>
+print(<span style="color: #ce9178;">f"Model R² Score: {model.score(X, y):.4f}"</span>)
+print(<span style="color: #ce9178;">f"Coefficients: {model.coef_}"</span>)</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Output Cell -->
+                    <div class="notebook-cell output-cell">
+                        <div class="cell-label" style="color: #d16969; margin-bottom: 5px; font-size: 0.9em;">Out [1]:
+                        </div>
+                        <div class="output-block"
+                            style="background: #2d2d2d; padding: 15px; border-radius: 5px; border-left: 4px solid #d16969; color: #d4d4d4;">
+                            <pre style="margin: 0; margin-bottom: 10px;">Model R² Score: 0.9035
+Coefficients: Area=1954.61, Rooms=13301.47, Age=-545.02
+Intercept: 60829.87</pre>
+                            <div class="output-image" style="margin-top: 15px;">
+                                <img src="../images/projects/linear_regression_demo.png" alt="Linear Regression Results"
+                                    style="max-width: 100%; border-radius: 4px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

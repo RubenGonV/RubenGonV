@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Micro-Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ml-projects.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Rubén G.V. / ML Projects</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="https://github.com/RubenGonV/RubenGonV" target="_blank">Repo</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="progress-tracker" id="progress-tracker">
+        <div class="progress-content">
+            <span class="progress-label">Progress:</span>
+            <span id="progress-count">0/0</span>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Machine Learning Micro-Projects</h1>
+            <p>A collection of implementations categorized by technique.</p>
+        </header>
+
+        <section class="category-section">
+            <h2>Supervised Learning</h2>
+            <div class="projects-grid">
+                <a href="projects/project-linear-regression.html" class="project-card-link">
+                    <div class="project-card completed" data-status="completed">
+                        <div class="card-content">
+                            <h3>Linear Regression</h3>
+                            <span class="category-label">Supervised</span>
+                            <div class="status-badge">
+                                <i class="fas fa-check"></i> Done
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Classification</h3>
+                        <span class="category-label">Supervised</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+                <a href="projects/project-computer-vision.html" class="project-card-link">
+                    <div class="project-card completed" data-status="completed">
+                        <div class="card-content">
+                            <h3>TFG - Visión Artificial</h3>
+                            <span class="category-label">Computer Vision</span>
+                            <div class="status-badge">
+                                <i class="fas fa-check"></i> Done
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="projects/project-flight-trajectories.html" class="project-card-link">
+                    <div class="project-card completed" data-status="completed">
+                        <div class="card-content">
+                            <h3>TFM - Trayectorias de Vuelo</h3>
+                            <span class="category-label">Deep Learning</span>
+                            <div class="status-badge">
+                                <i class="fas fa-check"></i> Done
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Unsupervised Learning</h2>
+            <div class="projects-grid">
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>K-Means Clustering</h3>
+                        <span class="category-label">Unsupervised</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>PCA Visualization</h3>
+                        <span class="category-label">Unsupervised</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Self-Supervised</h2>
+            <div class="projects-grid">
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Autoencoder</h3>
+                        <span class="category-label">Self-Supervised</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Semi-Supervised</h2>
+            <div class="projects-grid">
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Self-Training</h3>
+                        <span class="category-label">Semi-Supervised</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Reinforcement Learning</h2>
+            <div class="projects-grid">
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Gridworld Agent</h3>
+                        <span class="category-label">RL</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Ensemble & Advanced</h2>
+            <div class="projects-grid">
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Random Forest vs XGBoost</h3>
+                        <span class="category-label">Ensemble</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card coming-soon" data-status="coming-soon">
+                    <div class="card-content">
+                        <h3>Gaussian Processes</h3>
+                        <span class="category-label">Advanced</span>
+                        <div class="status-badge">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>Simulation & Optimization</h2>
+            <div class="projects-grid">
+                <a href="projects/project-airport-simulation.html" class="project-card-link">
+                    <div class="project-card completed" data-status="completed">
+                        <div class="card-content">
+                            <h3>Simulación de Aeropuerto</h3>
+                            <span class="category-label">Simulation</span>
+                            <div class="status-badge">
+                                <i class="fas fa-check"></i> Done
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="projects/project-genetic-algorithm.html" class="project-card-link">
+                    <div class="project-card completed" data-status="completed">
+                        <div class="card-content">
+                            <h3>Algoritmo Genético</h3>
+                            <span class="category-label">Optimization</span>
+                            <div class="status-badge">
+                                <i class="fas fa-check"></i> Done
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Rubén González Velasco</p>
+            <a href="https://github.com/RubenGonV/RubenGonV" target="_blank"><i class="fab fa-github"></i>
+                Repository</a>
+        </div>
+    </footer>
+
+    <script src="ml-projects.js"></script>
+</body>
+
+</html>
