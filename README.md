@@ -1,15 +1,15 @@
 # 👋 Hola, soy Rubén González Velasco  
 
-## 💫 Acerca de mí:
+## 💫 About me:
 
-Soy **Máster en Inteligencia Artificial** y **Graduado en Matemáticas e Informática** por la Universidad Politécnica de Madrid.  
-Mi especialidad es aplicar técnicas de IA y Machine Learning a problemas complejos como gestión del tráfico aéreo, visión por computador y análisis de datos.  
+I'm an Machine Learning Engineer. I apply AI techniques to real-world problems, like air traffic management.
+**MSc in Artificial Intelligence** and **BSc in Mathematics and Computer Science** from the Technical University of Madrid. 
 
-Recientemente, he trabajado en **CRIDA A.I.E.**, donde apliqué IA en sistemas de tráfico aéreo, desarrollando modelos de detección de anomalías en trayectorias de vuelo.  
+Recently, I worked at **CRIDA A.I.E.**, where I researched RNN and Transformer architectures on large-scale 4D flight trajectory datasets, developing AdherNet, a novel model for spatial-temporal similarity.
 
-Puedes saber más sobre mí, ver mis proyectos y mi curriculum visitando mi **[👉Portfolio Web👈](https://rubengonv.github.io/RubenGonV/)**
+You can learn more about me, check out some of my projects, or download my cv by visiting my **[👉Web Portfolio👈](https://rubengonv.github.io/RubenGonV/)**
 
-## 📬 Contacto  
+## 📬 Contact Information  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/rubengonvel) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:rubengonzalezvelasco@gmail.com) 
 
